@@ -14,6 +14,72 @@
     "connections" : [ {
       "backPressureDataSizeThreshold" : "1 GB",
       "backPressureObjectThreshold" : 10000,
+      "bends" : [ {
+        "x" : 669.0,
+        "y" : 79.0
+      }, {
+        "x" : 669.0,
+        "y" : 129.0
+      } ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "c35e96b7-15e0-382d-a0c5-bd2124d1617a",
+        "name" : "PutElasticsearchJson",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "27b24c24-f92d-33ee-a376-52e8c7fb73e2",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "errors", "failure" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "c35e96b7-15e0-382d-a0c5-bd2124d1617a",
+        "name" : "PutElasticsearchJson",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 3
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "c35e96b7-15e0-382d-a0c5-bd2124d1617a",
+        "name" : "PutElasticsearchJson",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "6246b533-cc62-3e37-aefa-d1d7ff086869",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "df2479be-951e-3164-a13e-c3faac4e33ad",
+        "name" : "GetFile",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 2
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
       "bends" : [ ],
       "componentType" : "CONNECTION",
       "destination" : {
@@ -174,6 +240,222 @@
       },
       "scheduledState" : "DISABLED",
       "type" : "org.apache.nifi.kafka.service.Kafka3ConnectionService"
+    }, {
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-elasticsearch-client-service-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.9.0"
+      },
+      "comments" : "",
+      "componentType" : "CONTROLLER_SERVICE",
+      "controllerServiceApis" : [ {
+        "bundle" : {
+          "artifact" : "nifi-elasticsearch-client-service-api-nar",
+          "group" : "org.apache.nifi",
+          "version" : "2.9.0"
+        },
+        "type" : "org.apache.nifi.elasticsearch.ElasticSearchClientService"
+      } ],
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "6945c5ff-381a-3b5b-a561-2df4e25e63c4",
+      "name" : "ElasticSearchClientServiceImpl",
+      "properties" : {
+        "Sniffer Request Timeout" : "1 sec",
+        "Connect Timeout" : "5000",
+        "HTTP Hosts" : "http://localhost:9200",
+        "Enable Compression" : "false",
+        "Read Timeout" : "60000",
+        "Sniff on Failure" : "false",
+        "Sniffer Failure Delay" : "1 min",
+        "Suppress Null and Empty Values" : "always-suppress",
+        "Node Selector" : "ANY",
+        "Strict Deprecation" : "false",
+        "Sniff Cluster Nodes" : "false",
+        "Send Meta Header" : "true",
+        "Authorization Scheme" : "NONE",
+        "Sniffer Interval" : "5 mins",
+        "Character Set" : "UTF-8"
+      },
+      "propertyDescriptors" : {
+        "Sniffer Request Timeout" : {
+          "displayName" : "Sniffer Request Timeout",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Sniffer Request Timeout",
+          "sensitive" : false
+        },
+        "Connect Timeout" : {
+          "displayName" : "Connect Timeout",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Connect Timeout",
+          "sensitive" : false
+        },
+        "API Key ID" : {
+          "displayName" : "API Key ID",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "API Key ID",
+          "sensitive" : false
+        },
+        "Enable Compression" : {
+          "displayName" : "Enable Compression",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Enable Compression",
+          "sensitive" : false
+        },
+        "Sniff on Failure" : {
+          "displayName" : "Sniff on Failure",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Sniff on Failure",
+          "sensitive" : false
+        },
+        "OAuth2 Access Token Provider" : {
+          "displayName" : "OAuth2 Access Token Provider",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "OAuth2 Access Token Provider",
+          "sensitive" : false
+        },
+        "Node Selector" : {
+          "displayName" : "Node Selector",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Node Selector",
+          "sensitive" : false
+        },
+        "Proxy Configuration Service" : {
+          "displayName" : "Proxy Configuration Service",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "Proxy Configuration Service",
+          "sensitive" : false
+        },
+        "Strict Deprecation" : {
+          "displayName" : "Strict Deprecation",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Strict Deprecation",
+          "sensitive" : false
+        },
+        "JWT Shared Secret" : {
+          "displayName" : "JWT Shared Secret",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "JWT Shared Secret",
+          "sensitive" : true
+        },
+        "API Key" : {
+          "displayName" : "API Key",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "API Key",
+          "sensitive" : true
+        },
+        "Send Meta Header" : {
+          "displayName" : "Send Meta Header",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Send Meta Header",
+          "sensitive" : false
+        },
+        "Authorization Scheme" : {
+          "displayName" : "Authorization Scheme",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Authorization Scheme",
+          "sensitive" : false
+        },
+        "Password" : {
+          "displayName" : "Password",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Password",
+          "sensitive" : true
+        },
+        "HTTP Hosts" : {
+          "displayName" : "HTTP Hosts",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "HTTP Hosts",
+          "sensitive" : false
+        },
+        "Path Prefix" : {
+          "displayName" : "Path Prefix",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Path Prefix",
+          "sensitive" : false
+        },
+        "Read Timeout" : {
+          "displayName" : "Read Timeout",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Read Timeout",
+          "sensitive" : false
+        },
+        "Sniffer Failure Delay" : {
+          "displayName" : "Sniffer Failure Delay",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Sniffer Failure Delay",
+          "sensitive" : false
+        },
+        "Suppress Null and Empty Values" : {
+          "displayName" : "Suppress Null and Empty Values",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Suppress Null and Empty Values",
+          "sensitive" : false
+        },
+        "Sniff Cluster Nodes" : {
+          "displayName" : "Sniff Cluster Nodes",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Sniff Cluster Nodes",
+          "sensitive" : false
+        },
+        "SSL Context Service" : {
+          "displayName" : "SSL Context Service",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "SSL Context Service",
+          "sensitive" : false
+        },
+        "Username" : {
+          "displayName" : "Username",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Username",
+          "sensitive" : false
+        },
+        "Sniffer Interval" : {
+          "displayName" : "Sniffer Interval",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Sniffer Interval",
+          "sensitive" : false
+        },
+        "Run As User" : {
+          "displayName" : "Run As User",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Run As User",
+          "sensitive" : false
+        },
+        "Character Set" : {
+          "displayName" : "Character Set",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Character Set",
+          "sensitive" : false
+        }
+      },
+      "scheduledState" : "DISABLED",
+      "type" : "org.apache.nifi.elasticsearch.ElasticSearchClientServiceImpl"
     } ],
     "defaultBackPressureDataSizeThreshold" : "1 GB",
     "defaultBackPressureObjectThreshold" : 10000,
@@ -493,6 +775,316 @@
       "style" : { },
       "type" : "org.apache.nifi.kafka.processors.ConsumeKafka",
       "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ "original", "retry", "successful" ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-elasticsearch-restapi-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.9.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "c35e96b7-15e0-382d-a0c5-bd2124d1617a",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "PutElasticsearchJson",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 192.0,
+        "y" : 40.0
+      },
+      "properties" : {
+        "Treat Not Found as Success" : "true",
+        "Max FlowFiles Per Batch" : "100",
+        "Max Batch Size" : "10 MB",
+        "Max JSON Field String Length" : "20 MB",
+        "Output Bulk Request" : "false",
+        "Index Operation" : "index",
+        "Index" : "fichero",
+        "Input Content Format" : "Single JSON",
+        "Log Error Responses" : "false",
+        "Output Error Responses" : "false",
+        "Suppress Nulls" : "never-suppress",
+        "Scripted Upsert" : "false",
+        "Client Service" : "6945c5ff-381a-3b5b-a561-2df4e25e63c4",
+        "Character Set" : "UTF-8"
+      },
+      "propertyDescriptors" : {
+        "Dynamic Templates" : {
+          "displayName" : "Dynamic Templates",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Dynamic Templates",
+          "sensitive" : false
+        },
+        "Treat Not Found as Success" : {
+          "displayName" : "Treat Not Found as Success",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Treat Not Found as Success",
+          "sensitive" : false
+        },
+        "Script" : {
+          "displayName" : "Script",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Script",
+          "sensitive" : false
+        },
+        "Max FlowFiles Per Batch" : {
+          "displayName" : "Max FlowFiles Per Batch",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Max FlowFiles Per Batch",
+          "sensitive" : false
+        },
+        "Max Batch Size" : {
+          "displayName" : "Max Batch Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Max Batch Size",
+          "sensitive" : false
+        },
+        "Max JSON Field String Length" : {
+          "displayName" : "Max JSON Field String Length",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Max JSON Field String Length",
+          "sensitive" : false
+        },
+        "Output Bulk Request" : {
+          "displayName" : "Output Bulk Request",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Output Bulk Request",
+          "sensitive" : false
+        },
+        "Index Operation" : {
+          "displayName" : "Index Operation",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Index Operation",
+          "sensitive" : false
+        },
+        "Index" : {
+          "displayName" : "Index",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Index",
+          "sensitive" : false
+        },
+        "Input Content Format" : {
+          "displayName" : "Input Content Format",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Input Content Format",
+          "sensitive" : false
+        },
+        "Log Error Responses" : {
+          "displayName" : "Log Error Responses",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Log Error Responses",
+          "sensitive" : false
+        },
+        "Output Error Responses" : {
+          "displayName" : "Output Error Responses",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Output Error Responses",
+          "sensitive" : false
+        },
+        "Identifier Attribute" : {
+          "displayName" : "Identifier Attribute",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Identifier Attribute",
+          "sensitive" : false
+        },
+        "Type" : {
+          "displayName" : "Type",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Type",
+          "sensitive" : false
+        },
+        "Suppress Nulls" : {
+          "displayName" : "Suppress Nulls",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Suppress Nulls",
+          "sensitive" : false
+        },
+        "Scripted Upsert" : {
+          "displayName" : "Scripted Upsert",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Scripted Upsert",
+          "sensitive" : false
+        },
+        "Identifier Field" : {
+          "displayName" : "Identifier Field",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Identifier Field",
+          "sensitive" : false
+        },
+        "Client Service" : {
+          "displayName" : "Client Service",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "Client Service",
+          "sensitive" : false
+        },
+        "Character Set" : {
+          "displayName" : "Character Set",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Character Set",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.elasticsearch.PutElasticsearchJson",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.9.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "df2479be-951e-3164-a13e-c3faac4e33ad",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "GetFile",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : -640.0,
+        "y" : 48.0
+      },
+      "properties" : {
+        "Keep Source File" : "false",
+        "Minimum File Age" : "0 sec",
+        "Polling Interval" : "30 sec",
+        "Input Directory" : "C:\\Users\\User\\Desktop\\Curso NIFI\\tmp\\input\\",
+        "Batch Size" : "10",
+        "Minimum File Size" : "0 B",
+        "Ignore Hidden Files" : "true",
+        "Recurse Subdirectories" : "true",
+        "File Filter" : "[^\\.].*"
+      },
+      "propertyDescriptors" : {
+        "Keep Source File" : {
+          "displayName" : "Keep Source File",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Keep Source File",
+          "sensitive" : false
+        },
+        "Minimum File Age" : {
+          "displayName" : "Minimum File Age",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Minimum File Age",
+          "sensitive" : false
+        },
+        "Polling Interval" : {
+          "displayName" : "Polling Interval",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Polling Interval",
+          "sensitive" : false
+        },
+        "Input Directory" : {
+          "displayName" : "Input Directory",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Input Directory",
+          "sensitive" : false
+        },
+        "Maximum File Age" : {
+          "displayName" : "Maximum File Age",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Maximum File Age",
+          "sensitive" : false
+        },
+        "Batch Size" : {
+          "displayName" : "Batch Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Batch Size",
+          "sensitive" : false
+        },
+        "Maximum File Size" : {
+          "displayName" : "Maximum File Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Maximum File Size",
+          "sensitive" : false
+        },
+        "Minimum File Size" : {
+          "displayName" : "Minimum File Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Minimum File Size",
+          "sensitive" : false
+        },
+        "Ignore Hidden Files" : {
+          "displayName" : "Ignore Hidden Files",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Ignore Hidden Files",
+          "sensitive" : false
+        },
+        "Recurse Subdirectories" : {
+          "displayName" : "Recurse Subdirectories",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Recurse Subdirectories",
+          "sensitive" : false
+        },
+        "File Filter" : {
+          "displayName" : "File Filter",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "File Filter",
+          "sensitive" : false
+        },
+        "Path Filter" : {
+          "displayName" : "Path Filter",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Path Filter",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.GetFile",
+      "yieldDuration" : "1 sec"
     } ],
     "remoteProcessGroups" : [ ],
     "scheduledState" : "ENABLED",
@@ -505,6 +1097,6 @@
   "snapshotMetadata" : {
     "author" : "eaa68870-d716-4097-b68d-8495e169dba0",
     "flowIdentifier" : "Kafka",
-    "timestamp" : 1779852261095
+    "timestamp" : 1779859000570
   }
 }
