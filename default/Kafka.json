@@ -1,0 +1,11 @@
+{
+  "flow" : {
+    "createdTimestamp" : 1779849940809,
+    "description" : "Proyecto Kafka",
+    "identifier" : "Kafka",
+    "lastModifiedTimestamp" : 1779849940809,
+    "name" : "Kafka",
+    "versionCount" : 0
+  },
+  "latest" : false
+}
