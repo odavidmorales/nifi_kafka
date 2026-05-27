@@ -14,19 +14,145 @@
     "connections" : [ {
       "backPressureDataSizeThreshold" : "1 GB",
       "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "c35e96b7-15e0-382d-a0c5-bd2124d1617a",
+        "name" : "Adultos",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "1e7a943b-cbc6-37b8-8dc7-58913d5d67da",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "adultos" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "c9f51a85-9edd-3334-80e3-c2aa55fdb91c",
+        "name" : "RouteOnAttribute",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 9
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "40fe4833-2284-331b-b0b7-0e634275978d",
+        "name" : "LogMessage",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "21ca708a-95d3-301a-82ca-714bfe804598",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "unmatched" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "c9f51a85-9edd-3334-80e3-c2aa55fdb91c",
+        "name" : "RouteOnAttribute",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 7
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
       "bends" : [ {
-        "x" : 669.0,
-        "y" : 79.0
+        "x" : 646.961181640625,
+        "y" : 464.4526062011719
       }, {
-        "x" : 669.0,
-        "y" : 129.0
+        "x" : 646.961181640625,
+        "y" : 514.4526062011719
+      } ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "67ede7cd-019e-1000-0c90-69cd9b727be3",
+        "name" : "Jovenes",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "22ad00a7-39b9-3efa-b565-3cda999cbfc0",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "errors", "failure" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "67ede7cd-019e-1000-0c90-69cd9b727be3",
+        "name" : "Jovenes",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 8
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "c9f51a85-9edd-3334-80e3-c2aa55fdb91c",
+        "name" : "RouteOnAttribute",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "26883202-741a-3616-b873-9e4fdda81272",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "matched" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "4ce6c7a1-c7aa-3dd2-8251-e0956cbf6587",
+        "name" : "EvaluateJsonPath",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 11
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ {
+        "x" : 604.4048614501953,
+        "y" : -200.13070154190063
+      }, {
+        "x" : 604.4048614501953,
+        "y" : -150.13070154190063
       } ],
       "componentType" : "CONNECTION",
       "destination" : {
         "comments" : "",
         "groupId" : "flow-contents-group",
         "id" : "c35e96b7-15e0-382d-a0c5-bd2124d1617a",
-        "name" : "PutElasticsearchJson",
+        "name" : "Adultos",
         "type" : "PROCESSOR"
       },
       "flowFileExpiration" : "0 sec",
@@ -43,40 +169,46 @@
         "comments" : "",
         "groupId" : "flow-contents-group",
         "id" : "c35e96b7-15e0-382d-a0c5-bd2124d1617a",
-        "name" : "PutElasticsearchJson",
+        "name" : "Adultos",
         "type" : "PROCESSOR"
       },
       "zIndex" : 3
     }, {
       "backPressureDataSizeThreshold" : "1 GB",
       "backPressureObjectThreshold" : 10000,
-      "bends" : [ ],
+      "bends" : [ {
+        "x" : -138.97240447998047,
+        "y" : -540.128791809082
+      }, {
+        "x" : -138.97240447998047,
+        "y" : -490.12879180908203
+      } ],
       "componentType" : "CONNECTION",
       "destination" : {
         "comments" : "",
         "groupId" : "flow-contents-group",
-        "id" : "c35e96b7-15e0-382d-a0c5-bd2124d1617a",
-        "name" : "PutElasticsearchJson",
+        "id" : "4ce6c7a1-c7aa-3dd2-8251-e0956cbf6587",
+        "name" : "EvaluateJsonPath",
         "type" : "PROCESSOR"
       },
       "flowFileExpiration" : "0 sec",
       "groupIdentifier" : "flow-contents-group",
-      "identifier" : "6246b533-cc62-3e37-aefa-d1d7ff086869",
+      "identifier" : "38654653-02e1-3be9-94de-80511e1e14e1",
       "labelIndex" : 0,
       "loadBalanceCompression" : "DO_NOT_COMPRESS",
       "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
       "name" : "",
       "partitioningAttribute" : "",
       "prioritizers" : [ ],
-      "selectedRelationships" : [ "success" ],
+      "selectedRelationships" : [ "failure" ],
       "source" : {
         "comments" : "",
         "groupId" : "flow-contents-group",
-        "id" : "df2479be-951e-3164-a13e-c3faac4e33ad",
-        "name" : "GetFile",
+        "id" : "4ce6c7a1-c7aa-3dd2-8251-e0956cbf6587",
+        "name" : "EvaluateJsonPath",
         "type" : "PROCESSOR"
       },
-      "zIndex" : 2
+      "zIndex" : 4
     }, {
       "backPressureDataSizeThreshold" : "1 GB",
       "backPressureObjectThreshold" : 10000,
@@ -85,13 +217,43 @@
       "destination" : {
         "comments" : "",
         "groupId" : "flow-contents-group",
-        "id" : "01524cb3-7b6a-387c-8d0c-42ddd8a424ce",
-        "name" : "LogAttribute",
+        "id" : "40fe4833-2284-331b-b0b7-0e634275978d",
+        "name" : "LogMessage",
         "type" : "PROCESSOR"
       },
       "flowFileExpiration" : "0 sec",
       "groupIdentifier" : "flow-contents-group",
-      "identifier" : "7f082f09-c703-3796-a8d6-a161c804c8aa",
+      "identifier" : "a417be36-63f2-3bce-bb83-08b700a62cf8",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "unmatched" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "4ce6c7a1-c7aa-3dd2-8251-e0956cbf6587",
+        "name" : "EvaluateJsonPath",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 5
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "4ce6c7a1-c7aa-3dd2-8251-e0956cbf6587",
+        "name" : "EvaluateJsonPath",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "bcd53d46-d21d-3edb-b8b9-d4e8140939a0",
       "labelIndex" : 0,
       "loadBalanceCompression" : "DO_NOT_COMPRESS",
       "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
@@ -106,7 +268,37 @@
         "name" : "ConsumeKafka",
         "type" : "PROCESSOR"
       },
-      "zIndex" : 1
+      "zIndex" : 6
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "67ede7cd-019e-1000-0c90-69cd9b727be3",
+        "name" : "Jovenes",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "e9502c56-5b3e-3139-a3d1-6f745c2fb29f",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "jovenes" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "c9f51a85-9edd-3334-80e3-c2aa55fdb91c",
+        "name" : "RouteOnAttribute",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 10
     } ],
     "controllerServices" : [ {
       "bulletinLevel" : "WARN",
@@ -477,6 +669,64 @@
     },
     "processGroups" : [ ],
     "processors" : [ {
+      "autoTerminatedRelationships" : [ "success" ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.9.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "40fe4833-2284-331b-b0b7-0e634275978d",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "LogMessage",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : -1640.0,
+        "y" : -576.0
+      },
+      "properties" : {
+        "Log Message" : "JSON descartado",
+        "Log Level" : "info"
+      },
+      "propertyDescriptors" : {
+        "Log Message" : {
+          "displayName" : "Log Message",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Log Message",
+          "sensitive" : false
+        },
+        "Log Level" : {
+          "displayName" : "Log Level",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Log Level",
+          "sensitive" : false
+        },
+        "Log Prefix" : {
+          "displayName" : "Log Prefix",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Log Prefix",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 25,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.LogMessage",
+      "yieldDuration" : "1 sec"
+    }, {
       "autoTerminatedRelationships" : [ ],
       "backoffMechanism" : "PENALIZE_FLOWFILE",
       "bulletinLevel" : "WARN",
@@ -490,77 +740,238 @@
       "concurrentlySchedulableTaskCount" : 1,
       "executionNode" : "ALL",
       "groupIdentifier" : "flow-contents-group",
-      "identifier" : "01524cb3-7b6a-387c-8d0c-42ddd8a424ce",
+      "identifier" : "4ce6c7a1-c7aa-3dd2-8251-e0956cbf6587",
       "maxBackoffPeriod" : "10 mins",
-      "name" : "LogAttribute",
+      "name" : "EvaluateJsonPath",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -112.0,
-        "y" : -224.0
+        "x" : -600.0,
+        "y" : -576.0
       },
       "properties" : {
-        "Log FlowFile Properties" : "true",
-        "Log Level" : "info",
-        "Output Format" : "Line per Attribute",
-        "Log Payload" : "false",
-        "Character Set" : "UTF-8",
-        "Attributes to Log Regular Expression" : ".*"
+        "Destination" : "flowfile-attribute",
+        "Max String Length" : "20 MB",
+        "Return Type" : "auto-detect",
+        "Null Value Representation" : "empty string",
+        "edad" : "$.edad",
+        "Path Not Found Behavior" : "ignore"
       },
       "propertyDescriptors" : {
-        "Log FlowFile Properties" : {
-          "displayName" : "Log FlowFile Properties",
+        "Destination" : {
+          "displayName" : "Destination",
           "dynamic" : false,
           "identifiesControllerService" : false,
-          "name" : "Log FlowFile Properties",
+          "name" : "Destination",
           "sensitive" : false
         },
-        "Log Level" : {
-          "displayName" : "Log Level",
+        "Max String Length" : {
+          "displayName" : "Max String Length",
           "dynamic" : false,
           "identifiesControllerService" : false,
-          "name" : "Log Level",
+          "name" : "Max String Length",
           "sensitive" : false
         },
-        "Attributes to Ignore" : {
-          "displayName" : "Attributes to Ignore",
+        "Return Type" : {
+          "displayName" : "Return Type",
           "dynamic" : false,
           "identifiesControllerService" : false,
-          "name" : "Attributes to Ignore",
+          "name" : "Return Type",
           "sensitive" : false
         },
-        "Attributes to Log" : {
-          "displayName" : "Attributes to Log",
+        "Null Value Representation" : {
+          "displayName" : "Null Value Representation",
           "dynamic" : false,
           "identifiesControllerService" : false,
-          "name" : "Attributes to Log",
+          "name" : "Null Value Representation",
           "sensitive" : false
         },
-        "Attributes to Ignore Regular Expression" : {
-          "displayName" : "Attributes to Ignore Regular Expression",
-          "dynamic" : false,
+        "edad" : {
+          "displayName" : "edad",
+          "dynamic" : true,
           "identifiesControllerService" : false,
-          "name" : "Attributes to Ignore Regular Expression",
+          "name" : "edad",
           "sensitive" : false
         },
-        "Output Format" : {
-          "displayName" : "Output Format",
+        "Path Not Found Behavior" : {
+          "displayName" : "Path Not Found Behavior",
           "dynamic" : false,
           "identifiesControllerService" : false,
-          "name" : "Output Format",
+          "name" : "Path Not Found Behavior",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.EvaluateJsonPath",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ "original", "retry", "successful" ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-elasticsearch-restapi-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.9.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "67ede7cd-019e-1000-0c90-69cd9b727be3",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "Jovenes",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 176.0,
+        "y" : 424.0
+      },
+      "properties" : {
+        "Treat Not Found as Success" : "true",
+        "Max FlowFiles Per Batch" : "100",
+        "Max Batch Size" : "10 MB",
+        "Max JSON Field String Length" : "20 MB",
+        "Output Bulk Request" : "false",
+        "Index Operation" : "index",
+        "Index" : "jovenes",
+        "Input Content Format" : "Single JSON",
+        "Log Error Responses" : "false",
+        "Output Error Responses" : "false",
+        "Suppress Nulls" : "never-suppress",
+        "Scripted Upsert" : "false",
+        "Client Service" : "6945c5ff-381a-3b5b-a561-2df4e25e63c4",
+        "Character Set" : "UTF-8"
+      },
+      "propertyDescriptors" : {
+        "Dynamic Templates" : {
+          "displayName" : "Dynamic Templates",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Dynamic Templates",
           "sensitive" : false
         },
-        "Log Payload" : {
-          "displayName" : "Log Payload",
+        "Treat Not Found as Success" : {
+          "displayName" : "Treat Not Found as Success",
           "dynamic" : false,
           "identifiesControllerService" : false,
-          "name" : "Log Payload",
+          "name" : "Treat Not Found as Success",
           "sensitive" : false
         },
-        "Log Prefix" : {
-          "displayName" : "Log Prefix",
+        "Script" : {
+          "displayName" : "Script",
           "dynamic" : false,
           "identifiesControllerService" : false,
-          "name" : "Log Prefix",
+          "name" : "Script",
+          "sensitive" : false
+        },
+        "Max FlowFiles Per Batch" : {
+          "displayName" : "Max FlowFiles Per Batch",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Max FlowFiles Per Batch",
+          "sensitive" : false
+        },
+        "Max Batch Size" : {
+          "displayName" : "Max Batch Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Max Batch Size",
+          "sensitive" : false
+        },
+        "Max JSON Field String Length" : {
+          "displayName" : "Max JSON Field String Length",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Max JSON Field String Length",
+          "sensitive" : false
+        },
+        "Output Bulk Request" : {
+          "displayName" : "Output Bulk Request",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Output Bulk Request",
+          "sensitive" : false
+        },
+        "Index Operation" : {
+          "displayName" : "Index Operation",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Index Operation",
+          "sensitive" : false
+        },
+        "Index" : {
+          "displayName" : "Index",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Index",
+          "sensitive" : false
+        },
+        "Input Content Format" : {
+          "displayName" : "Input Content Format",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Input Content Format",
+          "sensitive" : false
+        },
+        "Log Error Responses" : {
+          "displayName" : "Log Error Responses",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Log Error Responses",
+          "sensitive" : false
+        },
+        "Output Error Responses" : {
+          "displayName" : "Output Error Responses",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Output Error Responses",
+          "sensitive" : false
+        },
+        "Identifier Attribute" : {
+          "displayName" : "Identifier Attribute",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Identifier Attribute",
+          "sensitive" : false
+        },
+        "Type" : {
+          "displayName" : "Type",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Type",
+          "sensitive" : false
+        },
+        "Suppress Nulls" : {
+          "displayName" : "Suppress Nulls",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Suppress Nulls",
+          "sensitive" : false
+        },
+        "Scripted Upsert" : {
+          "displayName" : "Scripted Upsert",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Scripted Upsert",
+          "sensitive" : false
+        },
+        "Identifier Field" : {
+          "displayName" : "Identifier Field",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Identifier Field",
+          "sensitive" : false
+        },
+        "Client Service" : {
+          "displayName" : "Client Service",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "Client Service",
           "sensitive" : false
         },
         "Character Set" : {
@@ -569,23 +980,18 @@
           "identifiesControllerService" : false,
           "name" : "Character Set",
           "sensitive" : false
-        },
-        "Attributes to Log Regular Expression" : {
-          "displayName" : "Attributes to Log Regular Expression",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Attributes to Log Regular Expression",
-          "sensitive" : false
         }
       },
       "retriedRelationships" : [ ],
       "retryCount" : 10,
-      "runDurationMillis" : 25,
+      "runDurationMillis" : 0,
       "scheduledState" : "ENABLED",
       "schedulingPeriod" : "0 sec",
       "schedulingStrategy" : "TIMER_DRIVEN",
-      "style" : { },
-      "type" : "org.apache.nifi.processors.standard.LogAttribute",
+      "style" : {
+        "background-color" : "#1a41b7"
+      },
+      "type" : "org.apache.nifi.processors.elasticsearch.PutElasticsearchJson",
       "yieldDuration" : "1 sec"
     }, {
       "autoTerminatedRelationships" : [ ],
@@ -606,8 +1012,8 @@
       "name" : "ConsumeKafka",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -760.0,
-        "y" : -216.0
+        "x" : -592.0,
+        "y" : -1024.0
       },
       "properties" : {
         "Topics" : " nifi",
@@ -791,11 +1197,11 @@
       "groupIdentifier" : "flow-contents-group",
       "identifier" : "c35e96b7-15e0-382d-a0c5-bd2124d1617a",
       "maxBackoffPeriod" : "10 mins",
-      "name" : "PutElasticsearchJson",
+      "name" : "Adultos",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : 192.0,
-        "y" : 40.0
+        "x" : 128.0,
+        "y" : -240.0
       },
       "properties" : {
         "Treat Not Found as Success" : "true",
@@ -804,7 +1210,7 @@
         "Max JSON Field String Length" : "20 MB",
         "Output Bulk Request" : "false",
         "Index Operation" : "index",
-        "Index" : "fichero",
+        "Index" : "adultos",
         "Input Content Format" : "Single JSON",
         "Log Error Responses" : "false",
         "Output Error Responses" : "false",
@@ -954,7 +1360,9 @@
       "scheduledState" : "ENABLED",
       "schedulingPeriod" : "0 sec",
       "schedulingStrategy" : "TIMER_DRIVEN",
-      "style" : { },
+      "style" : {
+        "background-color" : "#cca519"
+      },
       "type" : "org.apache.nifi.processors.elasticsearch.PutElasticsearchJson",
       "yieldDuration" : "1 sec"
     }, {
@@ -971,119 +1379,50 @@
       "concurrentlySchedulableTaskCount" : 1,
       "executionNode" : "ALL",
       "groupIdentifier" : "flow-contents-group",
-      "identifier" : "df2479be-951e-3164-a13e-c3faac4e33ad",
+      "identifier" : "c9f51a85-9edd-3334-80e3-c2aa55fdb91c",
       "maxBackoffPeriod" : "10 mins",
-      "name" : "GetFile",
+      "name" : "RouteOnAttribute",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -640.0,
-        "y" : 48.0
+        "x" : -600.0,
+        "y" : 136.0
       },
       "properties" : {
-        "Keep Source File" : "false",
-        "Minimum File Age" : "0 sec",
-        "Polling Interval" : "30 sec",
-        "Input Directory" : "C:\\Users\\User\\Desktop\\Curso NIFI\\tmp\\input\\",
-        "Batch Size" : "10",
-        "Minimum File Size" : "0 B",
-        "Ignore Hidden Files" : "true",
-        "Recurse Subdirectories" : "true",
-        "File Filter" : "[^\\.].*"
+        "Routing Strategy" : "Route to Property name",
+        "jovenes" : "${edad:lt(18)}",
+        "adultos" : "${edad:ge(18)}"
       },
       "propertyDescriptors" : {
-        "Keep Source File" : {
-          "displayName" : "Keep Source File",
+        "Routing Strategy" : {
+          "displayName" : "Routing Strategy",
           "dynamic" : false,
           "identifiesControllerService" : false,
-          "name" : "Keep Source File",
+          "name" : "Routing Strategy",
           "sensitive" : false
         },
-        "Minimum File Age" : {
-          "displayName" : "Minimum File Age",
-          "dynamic" : false,
+        "jovenes" : {
+          "displayName" : "jovenes",
+          "dynamic" : true,
           "identifiesControllerService" : false,
-          "name" : "Minimum File Age",
+          "name" : "jovenes",
           "sensitive" : false
         },
-        "Polling Interval" : {
-          "displayName" : "Polling Interval",
-          "dynamic" : false,
+        "adultos" : {
+          "displayName" : "adultos",
+          "dynamic" : true,
           "identifiesControllerService" : false,
-          "name" : "Polling Interval",
-          "sensitive" : false
-        },
-        "Input Directory" : {
-          "displayName" : "Input Directory",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Input Directory",
-          "sensitive" : false
-        },
-        "Maximum File Age" : {
-          "displayName" : "Maximum File Age",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Maximum File Age",
-          "sensitive" : false
-        },
-        "Batch Size" : {
-          "displayName" : "Batch Size",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Batch Size",
-          "sensitive" : false
-        },
-        "Maximum File Size" : {
-          "displayName" : "Maximum File Size",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Maximum File Size",
-          "sensitive" : false
-        },
-        "Minimum File Size" : {
-          "displayName" : "Minimum File Size",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Minimum File Size",
-          "sensitive" : false
-        },
-        "Ignore Hidden Files" : {
-          "displayName" : "Ignore Hidden Files",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Ignore Hidden Files",
-          "sensitive" : false
-        },
-        "Recurse Subdirectories" : {
-          "displayName" : "Recurse Subdirectories",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Recurse Subdirectories",
-          "sensitive" : false
-        },
-        "File Filter" : {
-          "displayName" : "File Filter",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "File Filter",
-          "sensitive" : false
-        },
-        "Path Filter" : {
-          "displayName" : "Path Filter",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Path Filter",
+          "name" : "adultos",
           "sensitive" : false
         }
       },
       "retriedRelationships" : [ ],
       "retryCount" : 10,
-      "runDurationMillis" : 0,
+      "runDurationMillis" : 25,
       "scheduledState" : "ENABLED",
       "schedulingPeriod" : "0 sec",
       "schedulingStrategy" : "TIMER_DRIVEN",
       "style" : { },
-      "type" : "org.apache.nifi.processors.standard.GetFile",
+      "type" : "org.apache.nifi.processors.standard.RouteOnAttribute",
       "yieldDuration" : "1 sec"
     } ],
     "remoteProcessGroups" : [ ],
@@ -1097,6 +1436,6 @@
   "snapshotMetadata" : {
     "author" : "eaa68870-d716-4097-b68d-8495e169dba0",
     "flowIdentifier" : "Kafka",
-    "timestamp" : 1779859000570
+    "timestamp" : 1779861560061
   }
 }
